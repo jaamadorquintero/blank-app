@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Reporte de Asistencia</title>
+</head>
+<body>
+  <h1>Reporte de Asistencia</h1>
+  <table border="1">
+    <tr>
+      <th>Empleado</th>
+      <th>Entrada</th>
+      <th>Salida</th>
+      <th>Incidencia</th>
+    </tr>
+    {% for r in records %}
+    <tr>
+      <td>{{ r.worker.full_name }}</td>
+      <td>{{ r.check_in }}</td>
+      <td>{{ r.check_out }}</td>
+      <td>{{ r.incidence }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

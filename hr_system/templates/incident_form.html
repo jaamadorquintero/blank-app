@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Registrar Incidencia</title>
+</head>
+<body>
+  <h1>Registrar Incidencia</h1>
+  <form method="post">
+    <label>Trabajador:</label>
+    <select name="worker_id">
+      {% for w in workers %}
+      <option value="{{ w.id }}">{{ w.full_name }}</option>
+      {% endfor %}
+    </select><br>
+    <label>Tipo de incidencia:</label>
+    <input type="text" name="incident_type" /><br>
+    <label>Descripción:</label>
+    <textarea name="description"></textarea><br>
+    <button type="submit">Guardar</button>
+  </form>
+</body>
+</html>

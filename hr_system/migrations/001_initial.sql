@@ -11,6 +11,7 @@ CREATE TABLE workers (
     position VARCHAR(100),
     contract_type VARCHAR(50),
     area_project VARCHAR(100),
+    daily_salary NUMERIC(10,2) DEFAULT 0,
     photo_path VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

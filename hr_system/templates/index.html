@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sistema RRHH</title>
+  </head>
+  <body>
+    <h1>Sistema de Recursos Humanos</h1>
+    <ul>
+      <li><a href="{{ url_for('admin_workers') }}">Personal</a></li>
+      <li><a href="{{ url_for('attendance_report') }}">Reporte de asistencia</a></li>
+      <li><a href="{{ url_for('new_permit') }}">Solicitud de permiso</a></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Solicitud de Permiso</title>
+</head>
+<body>
+  <h1>Solicitud de Permiso</h1>
+  <form method="post">
+    <label>Trabajador:</label>
+    <select name="worker_id">
+      {% for w in workers %}
+      <option value="{{ w.id }}">{{ w.full_name }}</option>
+      {% endfor %}
+    </select><br>
+    <label>Tipo de permiso:</label>
+    <select name="permit_type">
+      <option value="personal">Personal</option>
+      <option value="medical">Médico</option>
+      <option value="other">Otro</option>
+    </select><br>
+    <label>Inicio:</label>
+    <input type="datetime-local" name="start" /><br>
+    <label>Fin:</label>
+    <input type="datetime-local" name="end" /><br>
+    <label>Justificación:</label>
+    <textarea name="justification"></textarea><br>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

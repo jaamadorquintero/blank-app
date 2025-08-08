@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Panel de administración - Trabajadores</title>
+</head>
+<body>
+  <h1>Trabajadores</h1>
+  <table border="1">
+    <tr>
+      <th>Número</th>
+      <th>Nombre</th>
+      <th>Puesto</th>
+      <th>Área/Proyecto</th>
+    </tr>
+    {% for w in workers %}
+    <tr>
+      <td>{{ w.employee_number }}</td>
+      <td>{{ w.full_name }}</td>
+      <td>{{ w.position }}</td>
+      <td>{{ w.area_project }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

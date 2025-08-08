@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Resumen de Nómina</title>
+</head>
+<body>
+  <h1>Nómina de {{ worker.full_name }}</h1>
+  <p>Semana iniciada: {{ payroll.week_start }}</p>
+  <ul>
+    <li>Días trabajados: {{ payroll.days_worked }}</li>
+    <li>Sueldo base: {{ payroll.base_salary }}</li>
+    <li>Horas extra: {{ payroll.overtime_hours }}</li>
+    <li>Pago horas extra: {{ overtime_pay }}</li>
+    <li>Deducciones: {{ payroll.deductions }}</li>
+    <li>Total a pagar: {{ payroll.total_pay }}</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Cálculo de Nómina</title>
+</head>
+<body>
+  <h1>Cálculo de Nómina Semanal</h1>
+  <form method="post">
+    <label>Trabajador:</label>
+    <select name="worker_id">
+      {% for w in workers %}
+      <option value="{{ w.id }}">{{ w.full_name }}</option>
+      {% endfor %}
+    </select><br>
+    <label>Inicio de semana:</label>
+    <input type="date" name="week_start" /><br>
+    <button type="submit">Calcular</button>
+  </form>
+</body>
+</html>

@@ -17,3 +17,16 @@ A simple Streamlit app template for you to modify!
    ```
    $ streamlit run streamlit_app.py
    ```
+
+### HR System demo
+
+This repository also includes a minimal Human Resources system built with
+Flask and SQLAlchemy. To initialize the database and run the web
+interface:
+
+```
+$ python hr_system/views.py
+```
+
+The app exposes simple endpoints for worker listings, attendance, permits,
+incidents and weekly payroll calculation.

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Lista de Incidencias</title>
+</head>
+<body>
+  <h1>Incidencias</h1>
+  <table border="1">
+    <tr>
+      <th>Trabajador</th>
+      <th>Tipo</th>
+      <th>Descripción</th>
+      <th>Estado</th>
+    </tr>
+    {% for i in incidents %}
+    <tr>
+      <td>{{ i.worker.full_name }}</td>
+      <td>{{ i.incident_type }}</td>
+      <td>{{ i.description }}</td>
+      <td>{{ i.status }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

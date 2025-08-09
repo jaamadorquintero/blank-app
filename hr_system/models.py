@@ -55,6 +55,7 @@ class Worker(Base):
     position = Column(String(100))
     contract_type = Column(String(50))
     area_project = Column(String(100))
+    daily_salary = Column(Float, default=0)
     photo_path = Column(String(255))
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

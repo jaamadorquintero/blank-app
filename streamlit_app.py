@@ -9,6 +9,7 @@ import streamlit as st
 import requests
 import streamlit.components.v1 as components
 
+# URL del backend Flask
 BASE_URL = "http://localhost:5000"
 
 st.title("Sistema de Recursos Humanos")
